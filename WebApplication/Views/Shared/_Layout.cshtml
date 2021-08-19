@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - 我的 ASP.NET 應用程式</title>
+    <title>@ViewBag.Title - @GlobalResources.Web.Views.Shared._Layout.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -17,14 +17,21 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("應用程式名稱", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink(GlobalResources.Web.Views.Shared._Layout.Index, "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("首頁", "Index", "Home")</li>
-                    <li>@Html.ActionLink("關於", "About", "Home")</li>
-                    <li>@Html.ActionLink("連絡人", "Contact", "Home")</li>
+                    <li>@Html.ActionLink(GlobalResources.Web.Views.Shared._Layout.Home, "Index", "Home")</li>
+                    <li>@Html.ActionLink(GlobalResources.Web.Views.Shared._Layout.About, "About", "Home")</li>
+                    <li>@Html.ActionLink(GlobalResources.Web.Views.Shared._Layout.Contact, "Contact", "Home")</li>
                 </ul>
+                <div style="padding-top:10px;">
+                    <select id="lang" name="lang" class="form-control">
+                        <option value="en-US" @(GlobalResources.CultureHelper.GetCurrentLanguage() == GlobalResources.Language.English ? "selected" : "")>English</option>
+                        <option value="zh-TW" @(GlobalResources.CultureHelper.GetCurrentLanguage() == GlobalResources.Language.TraditionalChinese ? "selected" : "")>繁體中文</option>
+                        <option value="ja-JP" @(GlobalResources.CultureHelper.GetCurrentLanguage() == GlobalResources.Language.Japanese ? "selected" : "")>日本語</option>
+                    </select>
+                </div>
             </div>
         </div>
     </div>
@@ -32,7 +39,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 應用程式</p>
+            <p>&copy; @DateTime.Now.Year - @GlobalResources.Web.Views.Shared._Layout.Title</p>
         </footer>
     </div>
 
@@ -41,3 +48,18 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#lang").on("change", function () {
+            $.ajax({
+                url: "/Home/SwitchLanguage",
+                data: { lang: $(this).val() },
+                type: "POST",
+                success: function (data) {
+                    location.reload();
+                }
+            });
+        });
+    })
+</script>

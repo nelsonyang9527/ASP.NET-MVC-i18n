@@ -1,0 +1,14 @@
+C:\Users\nelson.yang\Desktop\GitLab\GlobalGaming\third-party-withdraw-payment\PaymentService\App.Resources\bin\Debug\App.Resources.dll
+C:\Users\nelson.yang\Desktop\GitLab\GlobalGaming\third-party-withdraw-payment\PaymentService\App.Resources\bin\Debug\App.Resources.pdb
+C:\Users\nelson.yang\Desktop\GitLab\GlobalGaming\third-party-withdraw-payment\PaymentService\App.Resources\obj\Debug\App.Resources.csprojAssemblyReference.cache
+C:\Users\nelson.yang\Desktop\GitLab\GlobalGaming\third-party-withdraw-payment\PaymentService\App.Resources\obj\Debug\App.Resources.csproj.CoreCompileInputs.cache
+C:\Users\nelson.yang\Desktop\GitLab\GlobalGaming\third-party-withdraw-payment\PaymentService\App.Resources\obj\Debug\App.Resources.dll
+C:\Users\nelson.yang\Desktop\GitLab\GlobalGaming\third-party-withdraw-payment\PaymentService\App.Resources\obj\Debug\App.Resources.pdb
+C:\Users\nelson.yang\Desktop\GitLab\GlobalGaming\third-party-withdraw-payment\PaymentService\App.Resources\obj\Debug\App.Resources.WebPayment.resources
+C:\Users\nelson.yang\Desktop\GitLab\GlobalGaming\third-party-withdraw-payment\PaymentService\App.Resources\obj\Debug\App.Resources.csproj.GenerateResource.cache
+C:\Users\nelson.yang\Desktop\GitLab\GlobalGaming\third-party-withdraw-payment\PaymentService\App.Resources\bin\Debug\vi-VN\App.Resources.resources.dll
+C:\Users\nelson.yang\Desktop\GitLab\GlobalGaming\third-party-withdraw-payment\PaymentService\App.Resources\bin\Debug\zh-CN\App.Resources.resources.dll
+C:\Users\nelson.yang\Desktop\GitLab\GlobalGaming\third-party-withdraw-payment\PaymentService\App.Resources\obj\Debug\App.Resources.WebPayment.vi-VN.resources
+C:\Users\nelson.yang\Desktop\GitLab\GlobalGaming\third-party-withdraw-payment\PaymentService\App.Resources\obj\Debug\App.Resources.WebPayment.zh-CN.resources
+C:\Users\nelson.yang\Desktop\GitLab\GlobalGaming\third-party-withdraw-payment\PaymentService\App.Resources\obj\Debug\vi-VN\App.Resources.resources.dll
+C:\Users\nelson.yang\Desktop\GitLab\GlobalGaming\third-party-withdraw-payment\PaymentService\App.Resources\obj\Debug\zh-CN\App.Resources.resources.dll

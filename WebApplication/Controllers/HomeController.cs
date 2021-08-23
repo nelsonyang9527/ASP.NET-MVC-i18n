@@ -42,18 +42,15 @@ namespace WebApplication.Controllers
                 // 語系設定至Cookie
                 HttpCookie cookie = Request.Cookies["Lang"];
 
-                if (cookie != null)
+                if (cookie == null)
                 {
-                    // 更新 Cookie
-                    cookie.Value = lang;
+                    // 有存在就移除
+                    Request.Cookies.Remove("Lang");
                 }
-                else
-                {
-                    // 建立 Cookie
-                    cookie = new HttpCookie("Lang");
-                    cookie.Value = lang;
-                    cookie.Expires = DateTime.Now.AddYears(1);
-                }
+                // 建立 Cookie
+                cookie = new HttpCookie("Lang");
+                cookie.Value = lang;
+                cookie.Expires = DateTime.Now.AddYears(1);
                 Response.Cookies.Add(cookie);
 
                 return Json("success");
